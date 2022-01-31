@@ -51,7 +51,6 @@ architecture Behavioral of ALU is
 --signal c_op2: std_logic_vector(data_path_size-1 downto 0);
 signal mult: std_logic_vector(2*data_path_size-1 downto 0);
 signal aux_out: std_logic_vector(data_path_size-1 downto 0);
-constant zero: std_logic_vector(data_path_size-1 downto 0):=(others=>'0');
 -- load
 signal load_base, store_src: std_logic_vector(4 downto 0);
 signal offset: std_logic_vector(11 downto 0);
@@ -63,7 +62,7 @@ alu_proc: process(op1, op2, ctrl_alu)
 begin
 
 --c_op2 <=  not(op2) + 1;
-mult <= op1 * op2;
+    mult <= op1 * op2;
     op_imm1 <= (others => '0');
     op_imm2 <= (others => '0');
     case ctrl_alu is
