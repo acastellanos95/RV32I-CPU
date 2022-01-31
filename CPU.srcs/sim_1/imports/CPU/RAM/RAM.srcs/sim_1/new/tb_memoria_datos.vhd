@@ -90,7 +90,7 @@ begin
         wait for TbPeriod;
 
         -- EDIT Add stimuli here
-        for I in 0 to 63 loop
+        for I in 0 to 7 loop
             addr <= conv_std_logic_vector(I, addr'length);
             en <= '0';
             we <= '0';

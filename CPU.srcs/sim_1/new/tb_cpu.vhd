@@ -68,6 +68,7 @@ begin
         wait for TbPeriod;
         rst <= '0';
         wait for TbPeriod;
+        wait for TbPeriod;
 
         -- EDIT Add stimuli here
         wait for 100 * TbPeriod;

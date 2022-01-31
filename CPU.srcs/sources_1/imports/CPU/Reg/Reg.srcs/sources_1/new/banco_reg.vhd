@@ -67,7 +67,7 @@ begin
     end generate;
 
 
-    process(regwrt)
+    process(regwrt, clk)
     begin
         case regwrt is
             when "00000" => -- demux write to x0
@@ -139,7 +139,7 @@ begin
         end case;
     end process;
 
-    process(read_reg1)
+    process(read_reg1, clk)
     begin
         case read_reg1 is
             when "00000" => -- mux to read x0
@@ -211,7 +211,7 @@ begin
         end case;
     end process;
 
-    process(read_reg2)
+    process(read_reg2, clk)
     begin
         case read_reg2 is
             when "00000" => -- mux to read x0

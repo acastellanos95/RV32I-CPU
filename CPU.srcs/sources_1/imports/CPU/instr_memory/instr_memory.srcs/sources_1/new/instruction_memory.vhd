@@ -90,7 +90,7 @@ begin
     begin
         if clk'event and clk='1' then
             if rst='1' then
-                instruction_out <= (others => '0');
+                instruction_out <= (others => 'U');
             else
                 instruction_out <= ROM(conv_integer(addr));
             end if;
