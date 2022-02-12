@@ -117,13 +117,13 @@ begin
         
     ALU: entity work.alu
         port map(
-            clk => clk,
-            rst => rst,
+--            clk => clk,
+--            rst => rst,
             ctrl_alu => aluop,
             op1 => read_data1,
             op2 => op2,
-            sal_alu => alu_result,
-            H => H
+            sal_alu => alu_result
+--            H => H
         );
         
 

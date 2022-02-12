@@ -47,8 +47,8 @@ begin
         case instr(6 downto 0) is
             when "0001011" => -- load
                 ImmOut(16 downto 0) <= instr(31 downto 15);
-            when "0001100" =>
-                ImmOut(16 downto 0) <= instr(31 downto 15);
+            when "0001100" => --store
+                ImmOut(16 downto 0) <= "00000"&instr(31 downto 25)&instr(11 downto 7);
             when others =>
                 ImmOut(16 downto 0) <= (others => '0');
         end case;

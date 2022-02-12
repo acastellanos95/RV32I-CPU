@@ -2,9 +2,9 @@
 vhdl xil_defaultlib  \
 "../../../../CPU.srcs/sources_1/imports/CPU/instr_memory/instr_memory.srcs/sources_1/new/instruction_memory.vhd" \
 "../../../../CPU.srcs/sources_1/imports/CPU/RAM/RAM.srcs/sources_1/new/memoria_datos.vhd" \
-"../../../../CPU.srcs/sources_1/imports/CPU/PC/PC.srcs/sources_1/new/reg.vhd" \
 "../../../../CPU.srcs/sources_1/imports/CPU/Reg/Reg.srcs/sources_1/new/banco_reg.vhd" \
 "../../../../CPU.srcs/sources_1/imports/CPU/control/control.srcs/sources_1/new/control.vhd" \
+"../../../../CPU.srcs/sources_1/imports/CPU/PC/PC.srcs/sources_1/new/reg.vhd" \
 "../../../../CPU.srcs/sources_1/imports/CPU/PC/PC.srcs/sources_1/new/pc_alu.vhd" \
 "../../../../CPU.srcs/sources_1/imports/CPU/PC/PC.srcs/sources_1/new/pc.vhd" \
 "../../../../CPU.srcs/sources_1/imports/new/immgen.vhd" \

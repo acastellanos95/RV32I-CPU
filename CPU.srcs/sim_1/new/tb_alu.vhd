@@ -41,6 +41,9 @@ end tb_alu;
 architecture Behavioral of tb_alu is
 
     component ALU
+        generic(
+    data_path_size : integer:= 32
+    );
         port (op1      : in std_logic_vector (data_path_size-1 downto 0);
               op2      : in std_logic_vector (data_path_size-1 downto 0);
               sal_alu  : out std_logic_vector (data_path_size-1 downto 0);
@@ -104,11 +107,20 @@ begin
         wait for TbPeriod;
         op1 <= x"00000110";
         op2 <= x"00000141";
-        ctrl_alu <= "0001"; --multiplicacion
+        ctrl_alu <= "0010"; --multiplicacion
         wait for TbPeriod;
         op1 <= x"04200241";
         op2 <= x"05200249";
         ctrl_alu <= "0000"; --adicion
+        wait for TbPeriod;
+        op1 <= x"04200241";
+        op2 <= "00000000000000000000000000100000";
+        ctrl_alu <= "1011"; --load
+        wait for TbPeriod;
+        op1 <= x"04200241";
+        op2 <= "00000000000000000000000001100000";
+        ctrl_alu <= "1011"; --adicion
+        wait for TbPeriod;
         wait for TbPeriod;
 
         -- Stop the clock and hence terminate the simulation
